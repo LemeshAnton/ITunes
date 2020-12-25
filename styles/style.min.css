@@ -658,11 +658,11 @@ input[type="range"]:focus::-ms-fill-upper {
     color: #f51e38;
 }
 
-input.video-volume {
+input.control-volume {
     margin-right: 5px;
     max-width: 100px;
 }
-.video-icon {
+.control-icon {
     margin-right: 5px;
 }
 .video-fullscreen {
