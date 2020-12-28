@@ -117,8 +117,17 @@ export const musicPlayerInit = () => {
     audioProgress.addEventListener('click', event => {
         const x = event.offsetX;
         const allWidth = audioProgress.clientWidth;
-        audioPlayer.currentTime = (x / allWidth) * audioPlayer.duration;
+        const progress = (x / allWidth) * audioPlayer.duration;
+        audioPlayer.currentTime = progress;
     });
+
+    return () => {
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+            audioButtonPlay.classList.remove('fa-pause');
+            audioButtonPlay.classList.add('fa-play');
+        }
+    }
 
 
 
